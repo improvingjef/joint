@@ -14,8 +14,18 @@ defmodule Joint.MixProject do
 
   # Run "mix help compile.app" to learn about applications.
   def application do
+    application(Mix.env())
+  end
+
+  def application(:test) do
     [
       mod: {Joint.Application, []},
+      extra_applications: [:logger]
+    ]
+  end
+
+  def application(_) do
+    [
       extra_applications: [:logger]
     ]
   end
