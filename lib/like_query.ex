@@ -9,8 +9,16 @@ defmodule Joint.LikeQuery do
   def to_query(clause, %Ecto.Query{} = query), do: where(query, ^clause)
 
   def like(module, searchable, search_term, query) when is_binary(search_term) do
-    graph = Graph.visit(module, searchable)
+    like(module, searchable, search_term, Graph.visit(module, searchable), query)
+  end
 
+  def like(module, searchable, search_term) when is_binary(search_term) do
+    graph = module |> Graph.visit(searchable)
+    query = graph |> query()
+    like(module, searchable, search_term, graph, query)
+  end
+
+  def like(module, searchable, search_term, graph, query) do
     search_term
     |> String.trim()
     |> String.split()
@@ -18,18 +26,6 @@ defmodule Joint.LikeQuery do
     |> to_keyword_list()
     |> to_clauses(to_filters(graph))
     |> to_query(query)
-  end
-
-  def like(module, searchable, search_term) when is_binary(search_term) do
-    graph = Graph.visit(module, searchable)
-
-    search_term
-    |> String.trim()
-    |> String.split()
-    |> Enum.split_with(&String.starts_with?(&1, "-"))
-    |> to_keyword_list()
-    |> to_clauses(to_filters(graph))
-    |> to_query(graph)
   end
 
   def to_keyword_list({excludes, includes}) when is_list(excludes) and is_list(includes) do

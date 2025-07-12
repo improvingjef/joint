@@ -11,6 +11,8 @@ defmodule Joint.QueryBuilder do
   end
 
   def do_join(query, as, joins) do
+    IO.inspect({query.from.as, as}, label: "do_join")
+
     Enum.reduce(joins, query, fn
       join, query ->
         query

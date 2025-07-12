@@ -1,4 +1,4 @@
-defmodule Joint.Graph do
+defmodule Joint.GraphOld do
   @moduledoc """
   A graph is a data structure that traverses resource/model graph. It is used to:
   - build queries for the database, e.g. LikeQuery, NotLikeQuery

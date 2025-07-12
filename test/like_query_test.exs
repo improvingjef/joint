@@ -21,6 +21,8 @@ defmodule Joint.LikeQueryTest do
     end
 
     test "complicated joins" do
+      IO.inspect("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+
       query =
         LikeQuery.like(
           Joint.Orders.Order,
