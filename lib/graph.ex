@@ -59,10 +59,6 @@ defmodule Joint.Graph do
   def visit(graph, {assoc, fields}, optional)
       when (is_atom(assoc) and is_list(fields)) or is_atom(fields) do
     if assoc |> is_in(:associations, graph) do
-      IO.inspect(assoc,
-        label: "visiting association ############################################"
-      )
-
       association(graph, assoc, fields, optional)
     else
       raise "Association #{assoc} not found in #{graph.queryable}"
@@ -87,12 +83,10 @@ defmodule Joint.Graph do
   end
 
   def field(graph, field) do
-    IO.inspect(field, label: "field ############################################")
     %{graph | search_params: [field | graph.search_params]}
   end
 
   def association(graph, assoc, fields, optional) do
-    IO.inspect(assoc, label: "association ############################################")
     association = graph.queryable.__schema__(:association, assoc)
     as = if graph.nested, do: :"#{graph.as}_#{association.field}", else: association.field
     sub_search = visit(as, association.related, fields, optional, true)

@@ -1,6 +1,7 @@
 defmodule Joint.LikeQueryTest do
   use Joint.DataCase
   alias Joint.LikeQuery
+  use Joint.Q
 
   describe "LikeQuery" do
     test "and_clause with literal" do
@@ -33,6 +34,34 @@ defmodule Joint.LikeQueryTest do
             items: [:quantity, :price, product: [:name, :sku, :description, :price]]
           ],
           "betsy"
+        )
+        |> dbg()
+
+      assert not is_nil(query)
+    end
+
+    test "complicated joins 2" do
+      IO.inspect("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+
+      q =
+        q(Joint.Orders.Order, [
+          :date,
+          shipping_address: [:street, :city, :state, :zip],
+          billing_address: [:street, :city, :state, :zip],
+          items: [:quantity, :price, product: [:name, :sku, :description, :price]]
+        ])
+
+      query =
+        LikeQuery.like(
+          Joint.Orders.Order,
+          [
+            :date,
+            shipping_address: [:street, :city, :state, :zip],
+            billing_address: [:street, :city, :state, :zip],
+            items: [:quantity, :price, product: [:name, :sku, :description, :price]]
+          ],
+          "betsy",
+          q
         )
         |> dbg()
 

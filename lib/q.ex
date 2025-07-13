@@ -129,6 +129,8 @@ defmodule Joint.Q do
   end
 
   def flatten(atom, {index, parent, as_prefix, join, acc}) when is_atom(atom) do
+    IO.inspect(as_prefix, label: "1111111111111111")
+
     {index + 1, parent, as_prefix, join,
      [{parent, :"v#{index}", atom, :"#{as_prefix}_#{atom}", join} | acc]}
   end
@@ -140,8 +142,10 @@ defmodule Joint.Q do
   end
 
   def flatten({atom, child}, {index, parent, as_prefix, join, acc}) do
+    IO.inspect(as_prefix, label: "2222222222222222")
     var = :"v#{index}"
-    as = :"#{as_prefix}_#{atom}"
+    as = if as_prefix == nil, do: atom, else: :"#{as_prefix}_#{atom}"
+
     {new_index, _, _, _, fields} = flatten(child, {index + 1, var, as, join, []})
     {new_index, parent, as_prefix, join, fields ++ [{parent, var, atom, as, join} | acc]}
   end

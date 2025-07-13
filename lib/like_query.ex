@@ -5,20 +5,19 @@ defmodule Joint.LikeQuery do
   import Joint.Ecto, only: [string: 1]
 
   def query(graph), do: graph |> QueryBuilder.build()
-  def to_query(clause, %Graph{} = graph), do: graph |> query() |> where(^clause)
+  # def to_query(clause, %Graph{} = graph), do: graph |> query() |> where(^clause)
   def to_query(clause, %Ecto.Query{} = query), do: where(query, ^clause)
 
   def like(module, searchable, search_term, query) when is_binary(search_term) do
-    like(module, searchable, search_term, Graph.visit(module, searchable), query)
+    like(module, search_term, Graph.visit(module, searchable), query)
   end
 
   def like(module, searchable, search_term) when is_binary(search_term) do
-    graph = module |> Graph.visit(searchable)
-    query = graph |> query()
-    like(module, searchable, search_term, graph, query)
+    graph = Graph.visit(module, searchable)
+    like(module, search_term, graph, query(graph))
   end
 
-  def like(module, searchable, search_term, graph, query) do
+  def like(module, search_term, %Graph{} = graph, %Ecto.Query{} = query) do
     search_term
     |> String.trim()
     |> String.split()
