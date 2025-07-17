@@ -34,6 +34,27 @@ defmodule Joint.QueryParams do
     }
   end
 
+  def to_order_by(order_by) when is_atom(order_by), do: order_by
+
+  def to_order_by(order_by) when is_binary(order_by) do
+    if String.contains?(order_by, ".") do
+      order_by
+      |> String.split(".")
+      |> Enum.map(&String.to_atom/1)
+      |> Enum.reverse()
+      |> Enum.reduce(nil, fn
+        x, nil -> x
+        x, y -> {x, y}
+      end)
+    else
+      String.to_atom(order_by)
+    end
+  end
+
+  def direction("desc"), do: :desc
+  def direction("asc"), do: :asc
+  def direction(dir) when dir in [:asc, :desc], do: dir
+
   def previous(query, %__MODULE__{} = params) do
     current(query, %{params | offset: max(0, params.offset - params.limit)})
   end
