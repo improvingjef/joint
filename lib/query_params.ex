@@ -21,6 +21,14 @@ defmodule Joint.QueryParams do
     field(:filters, :map)
   end
 
+  defp to_atom(value) when is_atom(value), do: value
+  defp to_atom(value) when is_binary(value), do: String.to_atom(value)
+
+  def load(params, default_order_by \\ :inserted_at) do
+    order_by = Map.get(params, "order_by", default_order_by)
+    direction = Map.get(params, "direction", :asc) |> to_atom()
+  end
+
   def previous(query, %__MODULE__{} = params) do
     current(query, %{params | offset: max(0, params.offset - params.limit)})
   end
