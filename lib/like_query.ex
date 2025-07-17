@@ -12,11 +12,6 @@ defmodule Joint.LikeQuery do
     like(module, search_term, Graph.visit(module, searchable), query)
   end
 
-  def like(module, searchable, search_term) when is_binary(search_term) do
-    graph = Graph.visit(module, searchable)
-    like(module, search_term, graph, query(graph))
-  end
-
   def like(module, search_term, %Graph{} = graph, %Ecto.Query{} = query) do
     search_term
     |> String.trim()
@@ -25,6 +20,11 @@ defmodule Joint.LikeQuery do
     |> to_keyword_list()
     |> to_clauses(to_filters(graph))
     |> to_query(query)
+  end
+
+  def like(module, searchable, search_term) when is_binary(search_term) do
+    graph = Graph.visit(module, searchable)
+    like(module, search_term, graph, query(graph))
   end
 
   def to_keyword_list({excludes, includes}) when is_list(excludes) and is_list(includes) do
