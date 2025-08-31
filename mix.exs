@@ -46,7 +46,7 @@ defmodule Joint.MixProject do
       {:ecto_sql, "~> 3.13"},
       {:postgrex, "~> 0.16"},
       {:phoenix_live_view, "~> 1.1"},
-      {:inflex, "~> 2.1"},
+      {:inflex, git: "https://github.com/improvingjef/inflex.git"},
       {:credo, "~> 1.7.0", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.2", only: [:dev, :test], runtime: false},
       {:excoveralls, "~> 0.18.0", only: [:dev, :test], runtime: false},
