@@ -1,6 +1,6 @@
-defmodule Joint.ListWalkerTest do
+defmodule Joint.AssociationGraphBuilderTest do
   use Joint.DataCase
-  alias Joint.ListWalker
+  alias Joint.AssociationGraphBuilder
   alias Joint.Orders.Order
 
   # field :batch, :integer
@@ -30,23 +30,24 @@ defmodule Joint.ListWalkerTest do
   #   person: [:name]]
   # ],
 
-  describe "ListWalker" do
+  describe "AssociationGraphBuilder" do
     test "attributes only returns empty list" do
-      assert [] == ListWalker.walk(Order, [:date, :status])
+      assert [] == AssociationGraphBuilder.walk(Order, [:date, :status])
     end
 
     test "attributes plus one assoc returns single element list with assoc" do
-      assert [:shipping_address] == ListWalker.walk(Order, [:date, :status, :shipping_address])
+      assert [:shipping_address] ==
+               AssociationGraphBuilder.walk(Order, [:date, :status, :shipping_address])
     end
 
     test "assoc with nested attributes returns only assoc" do
       assert [:shipping_address] ==
-               ListWalker.walk(Order, [:date, :status, shipping_address: [:city]])
+               AssociationGraphBuilder.walk(Order, [:date, :status, shipping_address: [:city]])
     end
 
     test "assoc with deeply nested assoc returns only assoc" do
       assert [{:items, [:product]}] ==
-               ListWalker.walk(Order, [
+               AssociationGraphBuilder.walk(Order, [
                  :date,
                  :status,
                  items: [product: [:name, :sku]]
@@ -55,7 +56,7 @@ defmodule Joint.ListWalkerTest do
 
     test "assoc with deeply nested assoc returns only assoc - part 2" do
       assert [items: [:product]] ==
-               ListWalker.walk(
+               AssociationGraphBuilder.walk(
                  Order,
                  [
                    :date,
@@ -67,7 +68,7 @@ defmodule Joint.ListWalkerTest do
 
     # test "assoc with even more levels nested assoc returns only assoc" do
     #   assert [{:roaster, [model: [:make]]}, {:offering, [:type, :supplier, :category]}] ==
-    #            ListWalker.walk(
+    #            AssociationGraphBuilder.walk(
     #              Order,
     #              [
     #                :scheduled_date,
@@ -93,7 +94,7 @@ defmodule Joint.ListWalkerTest do
                :billing_address,
                items: [:product]
              ] ==
-               ListWalker.walk(
+               AssociationGraphBuilder.walk(
                  Order,
                  [
                    :date,

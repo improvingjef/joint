@@ -1,5 +1,5 @@
 # TODO: Rename this to something more descriptive
-defmodule Joint.ListWalker do
+defmodule Joint.AssociationGraphBuilder do
   @moduledoc """
   This module accepts a nested list of associations and fields,
   prunes the fields, and returns the remaining list of associations.

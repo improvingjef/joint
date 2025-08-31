@@ -87,7 +87,7 @@ defmodule Joint.Q do
     in_expr = {:in, [context: env, imports: [{2, Kernel}]], [source_variable, module_alias]}
     as_expr = {:as, as}
 
-    join_attrs = Joint.ListWalker.walk(module(module), attrs)
+    join_attrs = Joint.AssociationGraphBuilder.walk(module(module), attrs)
     joins_expr = expand_joins(:v, join_attrs, nil, env)
     {preload_expr, _, _, _} = expand_preloads(join_attrs, source_variable, 0, env)
     preloads = [preload: preload_expr]

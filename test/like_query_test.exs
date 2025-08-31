@@ -22,8 +22,6 @@ defmodule Joint.LikeQueryTest do
     end
 
     test "complicated joins" do
-      IO.inspect("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-
       query =
         LikeQuery.like(
           Joint.Orders.Order,
@@ -35,14 +33,11 @@ defmodule Joint.LikeQueryTest do
           ],
           "betsy"
         )
-        |> dbg()
 
       assert not is_nil(query)
     end
 
     test "complicated joins 2" do
-      IO.inspect("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-
       q =
         q(Joint.Orders.Order, [
           :date,
@@ -63,7 +58,6 @@ defmodule Joint.LikeQueryTest do
           "betsy",
           q
         )
-        |> dbg()
 
       assert not is_nil(query)
     end

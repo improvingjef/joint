@@ -69,9 +69,9 @@ defmodule Joint.ResourceQuery do
         |> Repo.all()
       end
 
-      def model(), do: @model
-      def index_query(), do: @index_query
-      def search_query(), do: @search_query
+      def model, do: @model
+      def index_query, do: @index_query
+      def search_query, do: @search_query
 
       def like(search_term) do
         Joint.LikeQuery.like(@model, @search, search_term, @search_query)

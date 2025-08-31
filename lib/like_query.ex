@@ -12,7 +12,7 @@ defmodule Joint.LikeQuery do
     like(module, search_term, Graph.visit(module, searchable), query)
   end
 
-  def like(module, search_term, %Graph{} = graph, %Ecto.Query{} = query) do
+  def like(_module, search_term, %Graph{} = graph, %Ecto.Query{} = query) do
     search_term
     |> String.trim()
     |> String.split()
