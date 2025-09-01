@@ -139,6 +139,7 @@ defmodule Joint.Web.Table do
         def resource, do: @resource
         def columns, do: @columns
         def graph, do: @graph
+        def actions, do: @actions
 
         def query do
           query =
