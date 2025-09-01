@@ -105,7 +105,7 @@ defmodule Joint.Web.Table do
       alias Joint.Web.Column
       import Ecto.Query, only: [select_merge: 3, select: 3]
       import Joint.Web.Table
-      import Joint.Queries.AliasedSelect
+      import Joint.AliasedSelect
 
       Module.register_attribute(__MODULE__, :columns, accumulate: true)
       Module.register_attribute(__MODULE__, :actions, accumulate: true)
@@ -205,6 +205,14 @@ defmodule Joint.Web.Table do
       end
 
       Module.get_attribute(__MODULE__, :graph)
+    end
+  end
+
+  defmacro actions(opts) do
+    quote location: :keep do
+      action = struct(Joint.Web.Action, unquote(opts))
+
+      Module.put_attribute(__MODULE__, :actions, action)
     end
   end
 
