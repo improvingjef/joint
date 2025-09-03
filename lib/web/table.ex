@@ -209,7 +209,47 @@ defmodule Joint.Web.Table do
     end
   end
 
-  defmacro actions(opts) do
+  defmacro actions(url) do
+    quote location: :keep do
+      Module.put_attribute(
+        __MODULE__,
+        :actions,
+        struct(Joint.Web.Action,
+          url: unquote(url),
+          method: :get,
+          confirm?: false,
+          label: "Show",
+          icon: "eye"
+        )
+      )
+
+      Module.put_attribute(
+        __MODULE__,
+        :actions,
+        struct(Joint.Web.Action,
+          url: unquote(url),
+          method: :delete,
+          confirm?: false,
+          label: "Delete",
+          icon: "trash"
+        )
+      )
+
+      Module.put_attribute(
+        __MODULE__,
+        :actions,
+        struct(Joint.Web.Action,
+          url: unquote(url),
+          method: :patch,
+          confirm?: false,
+          label: "Edit",
+          icon: "pencil"
+        )
+      )
+    end
+  end
+
+  defmacro action(opts) do
     quote location: :keep do
       action = struct(Joint.Web.Action, unquote(opts))
 
