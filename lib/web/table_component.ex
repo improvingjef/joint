@@ -48,7 +48,7 @@ defmodule Joint.Web.TableComponent do
 
     ~H"""
     <div class="lg:border border-white/40 rounded-lg">
-      <table id={@id} role="table" class="card">
+      <table id={@id} role="table" class="card-table">
         <thead role="rowgroup">
           <tr role="row">
             <th :for={col <- @col} role="columnheader" class={[col.align, col.class]}>
