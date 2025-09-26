@@ -76,7 +76,7 @@ defmodule Joint.Q do
   def expand_module(module) do
     module_name = module_name(module)
     module = module(module)
-    as = module_name |> to_string() |> String.downcase() |> String.to_atom()
+    as = module_name |> Macro.underscore() |> String.to_atom()
     {{:__aliases__, [alias: module], [module_name]}, as}
   end
 

@@ -16692,3 +16692,200 @@ Type: :worker
 05:25:14.388 [info] Compiled joint in 163 ms
 05:25:14.388 [debug] sent notification server -> client textDocument/publishDiagnostics
 05:25:14.498 [debug] sent notification server -> client textDocument/publishDiagnostics
+05:25:21.363 [debug] handled request client -> server textDocument/codeAction in 5ms
+05:25:32.388 [debug] handled request client -> server textDocument/codeAction in 4ms
+08:02:15.982 [info] Resolved entity: {:variable, :col}
+08:02:15.983 [warning] Could not resolve hover request, got: {:error, {:unsupported, {:variable, :col}}}
+08:02:15.983 [debug] handled request client -> server textDocument/hover in 7ms
+08:02:22.467 [info] ################### opened file:///Users/jef/dev/perfecting/joint/test/like_query_test.exs
+08:02:22.467 [debug] handled notification client -> server textDocument/didOpen in 623µs
+08:02:22.479 [debug] handled notification client -> server textDocument/didClose in 2ms
+08:02:22.753 [info] Resolved entity: {:call, Kernel, :defmodule, 2}
+08:02:22.773 [debug] handled request client -> server textDocument/codeLens in 383µs
+08:02:22.906 [debug] handled request client -> server textDocument/codeAction in 163ms
+08:03:58.285 [info] ################### opened file:///Users/jef/dev/perfecting/joint/lib/aliased_select.ex
+08:03:58.285 [debug] handled notification client -> server textDocument/didOpen in 843µs
+08:03:58.297 [debug] handled notification client -> server textDocument/didClose in 437µs
+08:03:58.570 [info] Resolved entity: {:call, Kernel, :defmodule, 2}
+08:03:58.589 [debug] handled request client -> server textDocument/codeLens in 335µs
+08:03:58.672 [debug] handled request client -> server textDocument/codeAction in 113ms
+08:03:59.947 [warning] Could not resolve hover request, got: {:error, :not_found}
+08:03:59.947 [debug] handled request client -> server textDocument/hover in 3ms
+08:04:48.520 [info] ################### opened file:///Users/jef/dev/perfecting/joint/lib/query_builder.ex
+08:04:48.520 [debug] handled notification client -> server textDocument/didOpen in 514µs
+08:04:48.549 [debug] handled notification client -> server textDocument/didClose in 187µs
+08:04:48.809 [info] Resolved entity: {:call, Kernel, :defmodule, 2}
+08:04:48.834 [debug] handled request client -> server textDocument/codeLens in 292µs
+08:04:48.954 [debug] handled request client -> server textDocument/codeAction in 150ms
+08:04:59.857 [info] ################### opened file:///Users/jef/dev/perfecting/joint/lib/resource_query.ex
+08:04:59.857 [debug] handled notification client -> server textDocument/didOpen in 721µs
+08:04:59.877 [debug] handled notification client -> server textDocument/didClose in 195µs
+08:05:00.128 [info] Resolved entity: {:variable, :defmodule}
+08:05:00.128 [debug] handled request client -> server textDocument/codeAction in 8ms
+08:05:00.151 [debug] handled request client -> server textDocument/codeLens in 401µs
+08:05:05.653 [info] ################### opened file:///Users/jef/dev/perfecting/joint/lib/q.ex
+08:05:05.653 [debug] handled notification client -> server textDocument/didOpen in 662µs
+08:05:05.660 [debug] handled notification client -> server textDocument/didClose in 199µs
+08:05:05.937 [info] Resolved entity: {:call, Kernel, :defmodule, 2}
+08:05:05.957 [debug] handled request client -> server textDocument/codeLens in 295µs
+08:05:06.031 [debug] handled request client -> server textDocument/codeAction in 107ms
+08:05:06.256 [warning] Could not resolve hover request, got: {:error, :not_found}
+08:05:06.256 [debug] handled request client -> server textDocument/hover in 4ms
+08:05:06.601 [warning] Could not resolve hover request, got: {:error, :not_found}
+08:05:06.601 [debug] handled request client -> server textDocument/hover in 6ms
+08:06:20.552 [info] Resolved entity: {:module, String}
+08:06:20.573 [debug] handled request client -> server textDocument/hover in 30ms
+08:06:21.798 [info] Resolved entity: {:module, String}
+08:06:21.942 [debug] handled request client -> server textDocument/codeAction in 158ms
+08:06:56.545 [debug] handled notification client -> server textDocument/didChange in 1ms
+08:06:56.559 [info] Completion for XpPos<<79, 41>>
+08:06:56.592 [info] Local completions are: [function: (inspect, inspect, is_atom, is_binary, is_bitstring, is_boolean, is_float, is_function, is_function, is_integer, is_list, is_map, is_map_key, is_number, is_pid, is_port, is_reference, is_tuple)   macro: (import, if, in, is_exception, is_exception, is_nil, is_non_struct_map, is_struct, is_struct)   ]
+08:06:56.594 [info] Emitting Completions: [3:inspect() 3:inspect(opts) 3:is_atom() 3:is_binary() 3:is_bitstring() 3:is_boolean() 3:is_float() 3:is_function() 3:is_function(arity) 3:is_integer() 3:is_list() 3:is_map() 3:is_map_key(key) 3:is_number() 3:is_pid() 3:is_port() 3:is_reference() 3:is_tuple() 7:import (import a module's functions) 7:if (if statement) 3:is_exception() 3:is_exception(name) 3:is_nil() 3:is_non_struct_map() 3:is_struct() 3:is_struct(name) ]
+08:06:56.595 [debug] handled request client -> server textDocument/completion in 48ms
+08:06:56.607 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:06:56.607 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:06:56.684 [debug] handled notification client -> server textDocument/didChange in 777µs
+08:06:56.743 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:06:56.743 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:06:56.951 [info] Resolved entity: {:variable, :ieString}
+08:06:56.952 [debug] handled request client -> server textDocument/codeAction in 8ms
+08:06:56.975 [debug] handled request client -> server textDocument/codeLens in 277µs
+08:06:57.304 [debug] handled notification client -> server textDocument/didChange in 1ms
+08:06:57.369 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:06:57.369 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:06:57.487 [debug] handled notification client -> server textDocument/didChange in 920µs
+08:06:57.577 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:06:57.577 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:06:57.764 [info] Resolved entity: {:module, String}
+08:06:57.785 [debug] handled request client -> server textDocument/codeLens in 354µs
+08:06:57.876 [debug] handled request client -> server textDocument/codeAction in 122ms
+08:07:18.781 [debug] handled request client -> server textDocument/codeAction in 13ms
+08:07:23.450 [info] Resolved entity: {:call, Kernel, :to_string, 1}
+08:07:23.552 [debug] handled request client -> server textDocument/codeAction in 121ms
+08:07:24.175 [debug] handled notification client -> server textDocument/didChange in 1ms
+08:07:24.200 [info] Completion for XpPos<<79, 26>>
+08:07:24.203 [warning] ** (ArgumentError) cannot pipe module_name into M, can only pipe into local calls foo(), remote calls Foo.bar() or anonymous function calls foo.()
+    (elixir 1.19.0-rc.0) lib/macro.ex:273: Macro.pipe/3
+    (stdlib 7.0.1) lists.erl:2466: :lists.foldl/3
+    (xp_elixir_sense 2.0.0) lib/elixir_sense/core/normalized/macro/env.ex:54: anonymous fn/5 in XPElixirSense.Core.Normalized.Macro.Env.wrap_expansion/7
+    (xp_elixir_sense 2.0.0) lib/elixir_sense/core/compiler.ex:2144: XPElixirSense.Core.Compiler.expand_macro_callback/7
+    (xp_elixir_sense 2.0.0) lib/elixir_sense/core/compiler.ex:117: XPElixirSense.Core.Compiler.expand/3
+    (xp_elixir_sense 2.0.0) lib/elixir_sense/core/compiler.ex:2828: XPElixirSense.Core.Compiler.expand_arg/3
+    (xp_elixir_sense 2.0.0) lib/elixir_sense/core/compiler.ex:2758: XPElixirSense.Core.Compiler.map_fold/5
+    (xp_elixir_sense 2.0.0) lib/elixir_sense/core/compiler.ex:2277: XPElixirSense.Core.Compiler.expand_remote/8
+
+08:07:24.207 [warning] ** (ArgumentError) cannot pipe module_name into M, can only pipe into local calls foo(), remote calls Foo.bar() or anonymous function calls foo.()
+    (elixir 1.19.0-rc.0) lib/macro.ex:347: Macro.pipe/3
+    (stdlib 7.0.1) lists.erl:2466: :lists.foldl/3
+    (xp_elixir_sense 2.0.0) lib/elixir_sense/core/normalized/macro/env.ex:54: anonymous fn/5 in XPElixirSense.Core.Normalized.Macro.Env.wrap_expansion/7
+    (xp_elixir_sense 2.0.0) lib/elixir_sense/core/compiler.ex:2144: XPElixirSense.Core.Compiler.expand_macro_callback/7
+    (xp_elixir_sense 2.0.0) lib/elixir_sense/core/compiler.ex:117: XPElixirSense.Core.Compiler.expand/3
+    (xp_elixir_sense 2.0.0) lib/elixir_sense/core/compiler.ex:2828: XPElixirSense.Core.Compiler.expand_arg/3
+    (xp_elixir_sense 2.0.0) lib/elixir_sense/core/compiler.ex:2758: XPElixirSense.Core.Compiler.map_fold/5
+    (xp_elixir_sense 2.0.0) lib/elixir_sense/core/compiler.ex:2277: XPElixirSense.Core.Compiler.expand_remote/8
+
+08:07:24.229 [info] Local completions are: [behaviour: (Module)   exception: (MatchError, MismatchedDelimiterError, MissingApplicationsError)   module: (MIME, Macro, Map, Mix, MixAudit)   struct: (MapSet)   ]
+08:07:24.230 [info] Emitting Completions: [9:MIME 9:Macro 9:Map 9:MapSet 9:Mix 9:MixAudit 9:Module ]
+08:07:24.230 [debug] handled request client -> server textDocument/completion in 42ms
+08:07:24.233 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:24.234 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:24.266 [debug] handled notification client -> server textDocument/didChange in 846µs
+08:07:24.323 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:24.323 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:24.353 [debug] handled notification client -> server textDocument/didChange in 866µs
+08:07:24.409 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:24.409 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:24.554 [debug] handled notification client -> server textDocument/didChange in 850µs
+08:07:24.612 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:24.612 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:24.710 [debug] handled notification client -> server textDocument/didChange in 903µs
+08:07:24.769 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:24.769 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:24.962 [debug] handled notification client -> server textDocument/didChange in 1ms
+08:07:24.973 [info] Completion for XpPos<<79, 31>>
+08:07:24.980 [warning] ** (ArgumentError) cannot pipe module_name into nil, can only pipe into local calls foo(), remote calls Foo.bar() or anonymous function calls foo.()
+    (elixir 1.19.0-rc.0) lib/macro.ex:347: Macro.pipe/3
+    (stdlib 7.0.1) lists.erl:2466: :lists.foldl/3
+    (xp_elixir_sense 2.0.0) lib/elixir_sense/core/normalized/macro/env.ex:54: anonymous fn/5 in XPElixirSense.Core.Normalized.Macro.Env.wrap_expansion/7
+    (xp_elixir_sense 2.0.0) lib/elixir_sense/core/compiler.ex:2144: XPElixirSense.Core.Compiler.expand_macro_callback/7
+    (xp_elixir_sense 2.0.0) lib/elixir_sense/core/compiler.ex:117: XPElixirSense.Core.Compiler.expand/3
+    (xp_elixir_sense 2.0.0) lib/elixir_sense/core/compiler.ex:142: XPElixirSense.Core.Compiler.do_expand/3
+    (xp_elixir_sense 2.0.0) lib/elixir_sense/core/compiler.ex:117: XPElixirSense.Core.Compiler.expand/3
+    (xp_elixir_sense 2.0.0) lib/elixir_sense/core/compiler.ex:2444: XPElixirSense.Core.Compiler.expand_block/5
+
+08:07:25.005 [info] Local completions are: [function: (__dbg__, __info__, camelize, classify_atom, compile_apply, dbg, decompose_call, escape, escape, expand, expand_literal, expand_literals, expand_literals, expand_once, generate_arguments, generate_unique_arguments, inspect_atom, inspect_atom, module_info, module_info, operator?, path, pipe, postwalk, postwalk, postwalker, prewalk, prewalk, prewalker, quoted_literal?, special_form?, struct!, struct_info!, to_string, to_string, traverse, underscore, unescape_string, unescape_string, unescape_tokens, unescape_tokens, unique_var, unpipe, update_meta, validate, var)   struct: (Env)   ]
+08:07:25.007 [info] Emitting Completions: [9:Env 3:__dbg__(header, options) 3:__info__() 3:camelize() 3:classify_atom() 3:compile_apply(fun, args, caller) 3:dbg(options, env) 3:decompose_call() 3:escape() 3:escape(opts) 3:expand(env) 3:expand_literal(env) 3:expand_literals(env) 3:expand_literals(acc, fun) 3:expand_once(env) 3:generate_arguments(context) 3:generate_unique_arguments(context) 3:inspect_atom(atom) 3:inspect_atom(atom, opts) 3:module_info() 3:operator?(arity) 3:path(fun) 3:pipe(call_args, position) 3:postwalk(fun) 3:postwalk(acc, fun) 3:postwalker() 3:prewalk(fun) 3:prewalk(acc, fun) 3:prewalker() 3:quoted_literal?() 3:special_form?(arity) 3:struct!(env) 3:struct_info!(env) 3:to_string() 3:to_string(fun) 3:traverse(acc, pre, post) 3:underscore() 3:unescape_string() 3:unescape_string(map) 3:unescape_tokens() 3:unescape_tokens(map) 3:unique_var(context) 3:unpipe() 3:update_meta(fun) 3:validate() 3:var(context) ]
+08:07:25.008 [debug] handled request client -> server textDocument/completion in 47ms
+08:07:25.052 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:25.053 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:25.231 [info] Resolved entity: {:call, Macro, :|>, 2}
+08:07:25.254 [debug] handled request client -> server textDocument/codeLens in 265µs
+08:07:25.308 [debug] handled notification client -> server $/cancelRequest in 107µs
+08:07:25.309 [debug] handled notification client -> server textDocument/didChange in 809µs
+08:07:25.398 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:25.398 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:25.420 [debug] handled notification client -> server textDocument/didChange in 780µs
+08:07:25.509 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:25.509 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:25.527 [debug] handled notification client -> server textDocument/didChange in 780µs
+08:07:25.618 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:25.618 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:25.708 [debug] handled notification client -> server textDocument/didChange in 801µs
+08:07:25.739 [debug] handled notification client -> server textDocument/didChange in 806µs
+08:07:25.840 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:25.840 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:25.886 [debug] handled notification client -> server textDocument/didChange in 771µs
+08:07:25.976 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:25.976 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:26.085 [debug] handled notification client -> server textDocument/didChange in 938µs
+08:07:26.182 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:26.182 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:26.254 [debug] handled notification client -> server textDocument/didChange in 841µs
+08:07:26.349 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:26.349 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:26.436 [debug] handled notification client -> server textDocument/didChange in 936µs
+08:07:26.531 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:26.531 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:26.718 [info] Resolved entity: {:call, Macro, :underscoo, 1}
+08:07:26.735 [debug] handled request client -> server textDocument/codeLens in 311µs
+08:07:26.752 [debug] handled notification client -> server textDocument/didChange in 933µs
+08:07:26.756 [debug] handled notification client -> server $/cancelRequest in 149µs
+08:07:26.958 [debug] handled notification client -> server textDocument/didChange in 996µs
+08:07:27.042 [debug] handled notification client -> server textDocument/didChange in 4ms
+08:07:27.045 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:27.045 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:27.136 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:27.136 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:27.315 [info] Resolved entity: {:call, Macro, :underscore, 1}
+08:07:27.340 [debug] handled request client -> server textDocument/codeLens in 296µs
+08:07:27.351 [debug] handled notification client -> server $/cancelRequest in 109µs
+08:07:27.352 [debug] handled notification client -> server textDocument/didChange in 1ms
+08:07:27.441 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:27.441 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:27.627 [debug] handled request client -> server textDocument/codeAction in 10ms
+08:07:27.649 [debug] handled request client -> server textDocument/codeLens in 366µs
+08:07:28.673 [info] Resolved entity: {:call, String, :to_atom, 1}
+08:07:28.673 [info] No definition found for {:call, String, :to_atom, 1} with Indexer.
+08:07:28.696 [debug] handled request client -> server textDocument/formatting in 5ms
+08:07:28.698 [debug] handled notification client -> server workspace/didChangeWatchedFiles in 392µs
+08:07:28.698 [debug] handled notification client -> server textDocument/didSave in 304µs
+08:07:28.704 [debug] handled request client -> server textDocument/definition in 35ms
+08:07:28.750 [debug] sent request server -> client window/workDoneProgress/create
+08:07:28.750 [debug] sent notification server -> client $/progress
+08:07:28.853 [debug] sent notification server -> client $/progress
+08:07:28.865 [debug] sent notification server -> client $/progress
+08:07:28.877 [debug] sent notification server -> client $/progress
+08:07:28.877 [info] Compiled joint in 127 ms
+08:07:28.877 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:28.877 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:28.930 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:28.930 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:07:45.931 [debug] handled request client -> server textDocument/codeAction in 17ms
+08:07:52.234 [info] ################### opened file:///Users/jef/dev/perfecting/joint/lib/filter.ex
+08:07:52.234 [debug] handled notification client -> server textDocument/didOpen in 742µs
+08:07:52.536 [info] Resolved entity: {:call, String, :downcase, 1}
+08:07:52.561 [debug] handled request client -> server textDocument/codeLens in 263µs
+08:07:52.635 [debug] handled request client -> server textDocument/codeAction in 106ms
+08:07:56.694 [info] Resolved entity: {:variable, :map}
+08:07:56.694 [warning] Could not resolve hover request, got: {:error, {:unsupported, {:variable, :map}}}
+08:07:56.694 [debug] handled request client -> server textDocument/hover in 4ms
