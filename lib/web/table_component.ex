@@ -29,6 +29,7 @@ defmodule Joint.Web.TableComponent do
   slot :col, required: true do
     attr(:field, :atom)
     attr(:sortable, :boolean)
+    attr(:edit, :string)
     attr(:header, :string)
     attr(:class, :string)
     attr(:align, :string, values: ~w[text-start text-center text-end text-justify])
@@ -88,6 +89,9 @@ defmodule Joint.Web.TableComponent do
             >
               <div>
                 <span :if={col[:inner_block]}><%= render_slot(col, row) %></span>
+                <form :if={is_nil(col[:inner_block]) and not is_nil(col[:edit])} phx-change={col[:edit]}>
+                  <input name="value" value={value(row, col)}>`
+                </form>
                 <span :if={is_nil(col[:inner_block])}><%= value(row, col) %></span>
               </div>
             </td>
