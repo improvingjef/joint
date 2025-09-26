@@ -82,18 +82,17 @@ defmodule Joint.Web.TableComponent do
             <!-- The data-heading is used in card mode to provide a header for the data item -->
             <td
               :for={{col, _i} <- Enum.with_index(@col)}
-              phx-click={@row_click && @row_click.(row)}
+              {if is_nil(col[:inner_block]) and is_nil(col[:edit]) and @row_click, do: %{"phx-click" => @row_click.(row)}, else: %{}}
               role="cell"
+              {if is_nil(col[:inner_block]) and is_nil(col[:edit]), do: %{tabindex: "-1"}, else: %{}}
               data-heading={col[:header]}
               class={[col.class, col.align]}
             >
-              <div>
+              <div {if is_nil(col[:inner_block]) and is_nil(col[:edit]), do: %{tabindex: "-1"}, else: %{}}>
                 <span :if={col[:inner_block]}><%= render_slot(col, row) %></span>
                 <!-- this phx-value-id value assumes the row has an id. Maybe Phoenix.Param is better? -->
-                <form :if={is_nil(col[:inner_block]) and not is_nil(col[:edit])} phx-change={col[:edit]} phx-value-id={elem(row, 1).id}>
-                  <input class="stable-inline-edit" name="value" value={value(row, col)}>
-                </form>
-                <span :if={is_nil(col[:inner_block]) and is_nil(col[:edit])}><%= value(row, col) %></span>
+                  <input tabindex="0" :if={is_nil(col[:inner_block]) and not is_nil(col[:edit])} phx-blur={col[:edit]} phx-value-id={elem(row, 1).id} class="stable-inline-edit" name="value" value={value(row, col)}>
+                <span tabindex="-1" :if={is_nil(col[:inner_block]) and is_nil(col[:edit])}><%= value(row, col) %></span>
               </div>
             </td>
             <td :if={@action != []} role="cell">
