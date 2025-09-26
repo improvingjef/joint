@@ -16671,3 +16671,24 @@ Type: :worker
 
 05:21:57.848 [debug] handled request client -> server textDocument/definition in 27ms
 05:21:57.870 [debug] sent notification server -> client textDocument/publishDiagnostics
+05:22:09.640 [debug] handled request client -> server textDocument/codeAction in 5ms
+05:22:39.673 [debug] handled request client -> server textDocument/codeAction in 7ms
+05:23:32.749 [info] Resolved entity: {:variable, :stable}
+05:23:32.750 [debug] handled request client -> server textDocument/codeAction in 11ms
+05:23:32.974 [info] Resolved entity: {:variable, :edit}
+05:23:32.975 [debug] handled request client -> server textDocument/definition in 4ms
+05:25:10.168 [debug] handled request client -> server textDocument/codeAction in 4ms
+05:25:11.235 [debug] handled notification client -> server textDocument/didChange in 1ms
+05:25:11.398 [debug] sent notification server -> client textDocument/publishDiagnostics
+05:25:11.511 [debug] handled request client -> server textDocument/codeAction in 2ms
+05:25:11.539 [debug] handled request client -> server textDocument/codeLens in 301µs
+05:25:14.171 [debug] handled request client -> server textDocument/formatting in 5ms
+05:25:14.173 [debug] handled notification client -> server workspace/didChangeWatchedFiles in 336µs
+05:25:14.174 [debug] handled notification client -> server textDocument/didSave in 287µs
+05:25:14.225 [debug] sent request server -> client window/workDoneProgress/create
+05:25:14.225 [debug] sent notification server -> client $/progress
+05:25:14.381 [debug] sent notification server -> client $/progress
+05:25:14.388 [debug] sent notification server -> client $/progress
+05:25:14.388 [info] Compiled joint in 163 ms
+05:25:14.388 [debug] sent notification server -> client textDocument/publishDiagnostics
+05:25:14.498 [debug] sent notification server -> client textDocument/publishDiagnostics
