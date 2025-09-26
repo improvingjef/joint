@@ -16889,3 +16889,100 @@ Type: :worker
 08:07:56.694 [info] Resolved entity: {:variable, :map}
 08:07:56.694 [warning] Could not resolve hover request, got: {:error, {:unsupported, {:variable, :map}}}
 08:07:56.694 [debug] handled request client -> server textDocument/hover in 4ms
+08:08:22.158 [debug] handled request client -> server textDocument/codeAction in 20ms
+08:08:55.772 [debug] handled request client -> server textDocument/codeAction in 18ms
+08:10:07.606 [debug] handled notification client -> server textDocument/didClose in 438µs
+08:10:11.761 [info] ################### opened file:///Users/jef/dev/perfecting/joint/lib/graph.ex
+08:10:11.761 [debug] handled notification client -> server textDocument/didOpen in 691µs
+08:10:12.052 [info] Resolved entity: {:module, Macro}
+08:10:12.080 [debug] handled request client -> server textDocument/codeLens in 311µs
+08:10:12.148 [debug] handled request client -> server textDocument/codeAction in 103ms
+08:10:12.815 [info] Resolved entity: {:call, String, :to_atom, 1}
+08:10:12.833 [debug] handled request client -> server textDocument/hover in 21ms
+08:10:19.123 [info] Resolved entity: {:call, Macro, :underscore, 1}
+08:10:19.140 [debug] handled request client -> server textDocument/hover in 21ms
+08:10:20.064 [debug] handled notification client -> server textDocument/didClose in 534µs
+08:10:20.069 [info] ################### opened file:///Users/jef/dev/perfecting/joint/lib/graph.ex
+08:10:20.069 [debug] handled notification client -> server textDocument/didOpen in 1ms
+08:10:20.346 [info] Resolved entity: {:module, Macro}
+08:10:20.365 [debug] handled request client -> server textDocument/codeLens in 360µs
+08:10:20.395 [warning] Could not resolve hover request, got: {:error, :not_found}
+08:10:20.395 [debug] handled request client -> server textDocument/hover in 1ms
+08:10:20.443 [debug] handled request client -> server textDocument/codeAction in 113ms
+08:10:21.648 [warning] Could not resolve hover request, got: {:error, {:unsupported, {:operator, ~c"|>"}}}
+08:10:21.648 [debug] handled request client -> server textDocument/hover in 2ms
+08:10:22.816 [info] Resolved entity: {:variable, :alias}
+08:10:22.817 [warning] Could not resolve hover request, got: {:error, {:unsupported, {:variable, :alias}}}
+08:10:22.817 [debug] handled request client -> server textDocument/hover in 5ms
+08:10:24.658 [warning] Could not resolve hover request, got: {:error, {:unsupported, {:operator, ~c"="}}}
+08:10:24.658 [debug] handled request client -> server textDocument/hover in 3ms
+08:10:25.846 [debug] handled request client -> server textDocument/codeAction in 16ms
+08:10:26.854 [info] Resolved entity: {:module, Macro}
+08:10:27.013 [debug] handled request client -> server textDocument/codeAction in 176ms
+08:10:27.547 [info] Resolved entity: {:call, Joint.Q, :module, 1}
+08:10:27.555 [debug] handled request client -> server textDocument/hover in 16ms
+08:12:48.516 [info] Resolved entity: {:variable, :module_name}
+08:12:48.516 [debug] handled request client -> server textDocument/codeAction in 16ms
+08:12:50.338 [info] Resolved entity: {:variable, :module_name}
+08:12:50.339 [warning] Could not resolve hover request, got: {:error, {:unsupported, {:variable, :module_name}}}
+08:12:50.339 [debug] handled request client -> server textDocument/hover in 6ms
+08:12:51.627 [info] Resolved entity: {:variable, :module_name}
+08:12:51.627 [debug] handled request client -> server textDocument/codeAction in 18ms
+08:12:52.411 [info] Resolved entity: {:variable, :module_name}
+08:12:52.411 [warning] Could not resolve hover request, got: {:error, {:unsupported, {:variable, :module_name}}}
+08:12:52.411 [debug] handled request client -> server textDocument/hover in 5ms
+08:12:53.785 [debug] handled notification client -> server textDocument/didChange in 1ms
+08:12:53.809 [info] Completion for XpPos<<79, 11>>
+08:12:53.837 [info] Local completions are: [function: (div)   macro: (dbg, dbg, dbg, def, def, defdelegate, defexception, defguard, defguardp, defimpl, defimpl, defmacro, defmacro, defmacrop, defmacrop, defmodule, defoverridable, defp, defp, defprotocol, defstruct, destructure)   ]
+08:12:53.841 [info] Emitting Completions: [3:div(dividend, divisor) 3:dbg() 3:dbg(code) 3:dbg(code, options) 7:def (define a function) 7:defdelegate (define a delegate function) 7:defexception (define an exception) 7:defguard (define a guard macro) 7:defguardp (define a private guard macro) 7:defimpl (define a protocol implementation) 7:defmacro (define a macro) 7:defmacrop (define a private macro) 7:defmodule (define a module) 7:defoverridable (mark a function as overridable) 7:defp (define a private function) 7:defprotocol (define a protocol) 7:defstruct (define a struct) ]
+08:12:53.841 [debug] handled request client -> server textDocument/completion in 45ms
+08:12:53.844 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:12:53.844 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:12:54.063 [debug] handled request client -> server textDocument/codeAction in 8ms
+08:12:54.064 [info] Resolved entity: {:variable, :dmodule_name}
+08:12:54.064 [debug] handled request client -> server textDocument/codeAction in 10ms
+08:12:54.090 [debug] handled request client -> server textDocument/codeLens in 309µs
+08:12:54.181 [debug] handled notification client -> server textDocument/didChange in 1ms
+08:12:54.247 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:12:54.247 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:12:54.444 [debug] handled request client -> server textDocument/codeAction in 9ms
+08:12:54.445 [info] Resolved entity: {:variable, :dbmodule_name}
+08:12:54.446 [debug] handled request client -> server textDocument/codeAction in 10ms
+08:12:54.453 [debug] handled notification client -> server textDocument/didChange in 1ms
+08:12:54.468 [debug] handled request client -> server textDocument/codeLens in 286µs
+08:12:54.517 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:12:54.517 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:12:54.727 [debug] handled request client -> server textDocument/codeAction in 8ms
+08:12:54.728 [info] Resolved entity: {:variable, :dbgmodule_name}
+08:12:54.728 [debug] handled request client -> server textDocument/codeAction in 10ms
+08:12:54.750 [debug] handled request client -> server textDocument/codeLens in 268µs
+08:12:55.334 [debug] handled notification client -> server textDocument/didChange in 1ms
+08:12:55.386 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:12:55.387 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:12:55.600 [debug] handled request client -> server textDocument/codeAction in 2ms
+08:12:55.600 [debug] handled request client -> server textDocument/codeAction in 1ms
+08:12:55.629 [debug] handled request client -> server textDocument/codeLens in 446µs
+08:12:57.162 [debug] handled request client -> server textDocument/codeAction in 2ms
+08:12:57.394 [debug] handled notification client -> server textDocument/didChange in 1ms
+08:12:57.491 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:12:57.491 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:12:57.667 [debug] handled request client -> server textDocument/codeAction in 10ms
+08:12:57.668 [debug] handled request client -> server textDocument/codeAction in 11ms
+08:12:57.690 [debug] handled request client -> server textDocument/codeLens in 311µs
+08:12:58.135 [error] GoToDefinition failed: :not_found
+08:12:58.136 [debug] handled request client -> server textDocument/definition in 4ms
+08:12:58.209 [debug] handled request client -> server textDocument/formatting in 6ms
+08:12:58.211 [debug] handled notification client -> server workspace/didChangeWatchedFiles in 566µs
+08:12:58.212 [debug] handled notification client -> server textDocument/didSave in 505µs
+08:12:58.264 [debug] sent request server -> client window/workDoneProgress/create
+08:12:58.267 [debug] sent notification server -> client $/progress
+08:12:58.364 [debug] sent notification server -> client $/progress
+08:12:58.376 [debug] sent notification server -> client $/progress
+08:12:58.391 [debug] sent notification server -> client $/progress
+08:12:58.391 [info] Compiled joint in 128 ms
+08:12:58.391 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:12:58.391 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:12:58.431 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:12:58.431 [debug] sent notification server -> client textDocument/publishDiagnostics
+08:12:58.652 [error] GoToDefinition failed: :not_found
+08:12:58.652 [debug] handled request client -> server textDocument/definition in 4ms
