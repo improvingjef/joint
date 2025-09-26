@@ -89,7 +89,8 @@ defmodule Joint.Web.TableComponent do
             >
               <div>
                 <span :if={col[:inner_block]}><%= render_slot(col, row) %></span>
-                <form :if={is_nil(col[:inner_block]) and not is_nil(col[:edit])} phx-change={col[:edit]}>
+                <!-- this phx-value-id value assumes the row has an id. Maybe Phoenix.Param is better? -->
+                <form :if={is_nil(col[:inner_block]) and not is_nil(col[:edit])} phx-change={col[:edit]} phx-value-id={row.id}>
                   <input name="value" value={value(row, col)}>`
                 </form>
                 <span :if={is_nil(col[:inner_block])}><%= value(row, col) %></span>
