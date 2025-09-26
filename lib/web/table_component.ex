@@ -73,8 +73,8 @@ defmodule Joint.Web.TableComponent do
             </th>
           </tr>
         </thead>
-        <tbody role="rowgroup">
-          <tr class="no-items hidden">
+        <tbody id="table-items" role="rowgroup" phx-update="stream">
+          <tr id="no-items" class="no-items hidden">
             <td class="text-center py-4" colspan={Enum.count(@col) + 1}>No items to display.</td>
           </tr>
           <tr :for={row <- @rows} role="row" id={"#{@id}-#{Phoenix.Param.to_param(row(row))}"}>
