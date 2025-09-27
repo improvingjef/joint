@@ -5,10 +5,10 @@ defmodule Joint.Web.Stable do
     icon =
       if order_by == field do
         case direction do
-          :asc -> "hero-arrow-long-up"
-          "asc" -> "hero-arrow-long-up"
-          :desc -> "hero-arrow-long-down"
-          "desc" -> "hero-arrow-long-down"
+          :asc -> "hero-chevron-up"
+          "asc" -> "hero-chevron-up"
+          :desc -> "hero-chevron-down"
+          "desc" -> "hero-chevron-down"
           _ -> "hero-chevron-up-down"
         end
       else

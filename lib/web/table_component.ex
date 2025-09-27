@@ -94,7 +94,7 @@ defmodule Joint.Web.TableComponent do
               <div {if is_nil(col[:inner_block]) and is_nil(col[:edit]), do: %{tabindex: "-1"}, else: %{}}>
                 <span :if={col[:inner_block]}><%= render_slot(col, row) %></span>
                 <!-- this phx-value-id value assumes the row has an id. Maybe Phoenix.Param is better? -->
-                  <input tabindex="0" :if={is_nil(col[:inner_block]) and not is_nil(col[:edit])} phx-blur={col[:edit]} phx-value-id={elem(row, 1).id} class="stable-inline-edit" name="value" value={value(row, col)}>
+                <input tabindex="0" :if={is_nil(col[:inner_block]) and not is_nil(col[:edit])} phx-blur={col[:edit]} phx-value-field={col[:field]} phx-value-id={elem(row, 1).id} class="stable-inline-edit w-full" name="value" value={value(row, col)}>
                 <span tabindex="-1" :if={is_nil(col[:inner_block]) and is_nil(col[:edit])}><%= value(row, col) %></span>
               </div>
             </td>
