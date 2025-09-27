@@ -42,11 +42,17 @@ defmodule Joint.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ecto, "~> 3.13"},
-      {:ecto_sql, "~> 3.13"},
+      dep(:ecto, "~> 3.7", "ECTO_PATH"),
       {:postgrex, "~> 0.16"},
+      {:heroicons,
+       github: "tailwindlabs/heroicons",
+       tag: "v2.1.1",
+       sparse: "optimized",
+       app: false,
+       compile: false,
+       depth: 1},
       {:phoenix_live_view, "~> 1.1"},
-      {:inflex, git: "https://github.com/improvingjef/inflex.git"},
+      dep(:inflex, "INFLEX_PATH", git: "https://github.com/improvingjef/inflex.git"),
       {:credo, "~> 1.7.0", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.2", only: [:dev, :test], runtime: false},
       {:excoveralls, "~> 0.18.0", only: [:dev, :test], runtime: false},
@@ -56,6 +62,22 @@ defmodule Joint.MixProject do
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
+  end
+
+  defp dep(dependency, env_variable, [git: git_url]) do
+    if path = System.get_env(env_variable) do
+      {dependency, [path: path]}
+    else
+      {dependency, git: git_url}
+    end
+  end
+
+  defp dep(dependency, version, env_variable, opts \\ []) do
+    if path = System.get_env(env_variable) do
+      {dependency, [path: path] ++ opts}
+    else
+      {dependency, version, opts}
+    end
   end
 
   def aliases do

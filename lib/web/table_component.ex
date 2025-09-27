@@ -32,7 +32,10 @@ defmodule Joint.Web.TableComponent do
     attr(:edit, :string)
     attr(:header, :string)
     attr(:class, :string)
-    attr(:align, :string, values: ~w[text-start text-center text-end text-justify])
+
+    attr(:align, :string, values: ~w[text-start text-center text-end text-justify justify-start justify-end justify-center]
+    )
+
     attr(:format, :any)
   end
 
@@ -56,7 +59,7 @@ defmodule Joint.Web.TableComponent do
               <span :if={not col.sortable}><%= col.header %></span>
               <.link
                 :if={col.sortable}
-                class="flex flex-row items-center gap-1"
+                class={["flex flex-row items-center gap-1", col.align]}
                 patch={
                   # IO.inspect(
                   # ,
@@ -66,7 +69,7 @@ defmodule Joint.Web.TableComponent do
                 }
               >
                 <span><%= col.header %></span>
-                <span class={[sort_icon(@order_by, col[:field], @direction), "w-4 h-4"]} />
+                <span class={[sort_icon(@order_by, col[:field], @direction), "size-4"]} />
               </.link>
             </th>
             <th :if={@action != []} role="columnheader">

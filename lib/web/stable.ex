@@ -2,17 +2,21 @@ defmodule Joint.Web.Stable do
   import Joint.Web.Formatters, only: [date: 1, time: 1]
 
   def sort_icon(order_by, field, direction) do
-    if order_by == field do
-      case direction do
-        :asc -> "hero-arrow-long-up"
-        "asc" -> "hero-arrow-long-up"
-        :desc -> "hero-arrow-long-down"
-        "desc" -> "hero-arrow-long-down"
-        _ -> "hero-chevron-up-down"
+    icon =
+      if order_by == field do
+        case direction do
+          :asc -> "hero-arrow-long-up"
+          "asc" -> "hero-arrow-long-up"
+          :desc -> "hero-arrow-long-down"
+          "desc" -> "hero-arrow-long-down"
+          _ -> "hero-chevron-up-down"
+        end
+      else
+        "hero-chevron-up-down"
       end
-    else
-      "hero-chevron-up-down"
-    end
+
+    dbg({order_by, field, direction, icon})
+    icon
   end
 
   def normalize(cols) when is_list(cols) do

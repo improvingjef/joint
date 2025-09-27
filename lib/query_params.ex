@@ -23,7 +23,7 @@ defmodule Joint.QueryParams do
 
   def load(params, default_order_by \\ :inserted_at, default_limit \\ 100) do
     %__MODULE__{
-      order_by: Map.get(params, "order_by", default_order_by),
+      order_by: order_by(Map.get(params, "order_by", default_order_by)),
       direction: direction(Map.get(params, "direction", :asc)),
       search: Map.get(params, "search", ""),
       limit: Map.get(params, "limit", default_limit),
@@ -31,9 +31,11 @@ defmodule Joint.QueryParams do
     }
   end
 
-  def to_order_by(order_by) when is_atom(order_by), do: order_by
+  def order_by(order_by) when is_atom(order_by), do: order_by
 
-  def to_order_by(order_by) when is_binary(order_by) do
+  def order_by(order_by) when is_binary(order_by) do
+    dbg({"order_by", order_by})
+
     if String.contains?(order_by, ".") do
       order_by
       |> String.split(".")
